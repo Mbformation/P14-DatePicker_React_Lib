@@ -1,8 +1,12 @@
 import "./styles.css";
+import DatePicker from "./DatePicker";
 
-// App est le composant racine de l'application
 function App() {
-  return <div>Test</div>;
+  return (
+    <>
+      <DatePicker />
+    </>
+  );
 }
 
 export default App;

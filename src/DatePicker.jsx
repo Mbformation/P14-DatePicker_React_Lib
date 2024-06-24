@@ -1,14 +1,20 @@
 import React, { useEffect, useRef } from "react";
 import Pikaday from "pikaday";
 
-function DatePicker() {
+function DatePicker({ onSelect }) {
   const datepickerRef = useRef();
-
   useEffect(() => {
-    new Pikaday({ field: datepickerRef.current });
-  }, []);
+    const datepicker = new Pikaday({
+      field: datepickerRef.current,
+      onSelect,
+      format: "D MMM YYYY",
+    });
+    datepicker.setDate("2023-01-01");
 
-  return <input type="text" ref={datepickerRef} />;
+    return () => datepicker.destroy(); // fermer le datepicker sinon boucle infinie
+  }, [onSelect]);
+
+  return <input type="text" ref={datepickerRef} readOnly />;
 }
 
 export default DatePicker;

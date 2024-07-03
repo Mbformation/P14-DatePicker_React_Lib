@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Pikaday from "pikaday";
 import "pikaday/css/pikaday.css";
 
-function Test() {
+function DatePicker(onChange) {
   const [date, setDate] = useState("");
   const datepickerRef = useRef();
 
@@ -12,6 +12,7 @@ function Test() {
       onSelect: function () {
         const currentDate = this.getMoment().format("MM/DD/YYYY");
         setDate(currentDate);
+        onChange(currentDate);
       },
     });
 
@@ -21,4 +22,4 @@ function Test() {
   return <input type="text" ref={datepickerRef} value={date} readOnly />;
 }
 
-export default Test;
+export default DatePicker;

@@ -1,10 +1,17 @@
 {
   "name": "datepicker-react-lib",
-  "version": "0.2.0",
+  "version": "0.3.1",
+  "description": "Datepicker library for react",
+  "keywords": ["react", "datepicker-library", "pikaday", "javascript", "jsx"],
+  "author": "Mbformation",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/Mbformation/P14-DatePicker_React_Lib.git"
+},
+  "license": "MIT",
   "main": "dist/index.jsx",
   "module": "dist/index.es.jsx",
   "dependencies": {
-    "datepicker-react-lib": "^0.2.0",
     "moment": "^2.30.1",
     "pikaday": "^1.8.2",
     "react": "^18.3.1",

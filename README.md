@@ -26,7 +26,7 @@ This will install the library for your project.
 
 Import the Datepicker component with:
 
-### `import DatePicker from "datepicker-react-lib;`
+### `import DatePicker from "datepicker-react-lib";`
 
 This will import the Datepicker component for you project, be used declared as a standard React component
 as follows: `<Datepicker />`
